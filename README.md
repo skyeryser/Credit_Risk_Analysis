@@ -6,21 +6,27 @@ This analysis uses machine learning to predict credit risk for LendingClub, a pe
 ## Results
 ### Naive Random Oversampling
 The balanced accuracy score for this method of oversampling is 64%. The precision for high risk debt has a positivity of 1% which means out of all the loans that the model predicted to be bad debt, only 1% actually qualify as such. The recall percentage shows that the model is able to predict the correct outcome for 60% of the loans that are classified as high risk.
+![naive_random_oversampling.png](https://github.com/skyeryser/Credit_Risk_Analysis/blob/main/Pictures/naive_random_oversampling.png)
 
 ###  Synthetic Minority Oversampling Technique (SMOTE)
 This method of oversampling works by creating extra datapoints from the minority class that replicate data included in the original dataset. The results using this method are similar to naive random oversampling. Once again, the balanced accuracy score is mediocre at just 66%. The precision for selecting bad debt is once again 1% with a recall of 69%.  The resulting F1 score is 0.02 which shows that this model rarely predicts the correct credit risk for loans.
+![smote_oversampling.png](https://github.com/skyeryser/Credit_Risk_Analysis/blob/main/Pictures/smote_oversampling.png)
 
 ### Undersampling
 Undersampling takes the opposite approach to balancing out the dataset. Instead of increasing the minority data, undersampling decreases the majority data to align with the minority data. The results using the cluster centroids method show a balanced accuracy score of 54%, precision of 1%, and recall of 40%. 
+![cluster_centroids_undersampling.png](https://github.com/skyeryser/Credit_Risk_Analysis/blob/main/Pictures/cluster_centroids_undersampling.png)
 
 ### Combination (Over/Undersampling)
 The SMOTEEN model mixes over and undersampling to optimize the accuracy of the resulting data. In this instance, the SMOTEEN model did not result in an improved balanced accuracy or F1 score.
+![smoteen.png](https://github.com/skyeryser/Credit_Risk_Analysis/blob/main/Pictures/smoteen.png)
 
 ### Balanced Random Forest Classifier
 The balanced random forest classifier model resulted in a balanced accuracy score of 79%, precision of 3%, and recall of 70%. Thusfar in the analysis, this model is the best predictor of credit risk. 
+![random_forest.png](https://github.com/skyeryser/Credit_Risk_Analysis/blob/main/Pictures/random_forest.png)
 
 ### Easy Ensemble Classifer
 The easy ensemble classifier had similar results to the balanced random forest classifier model.
+![easy_ensemble.png](https://github.com/skyeryser/Credit_Risk_Analysis/blob/main/Pictures/easy_ensemble.png)
 
 ## Summary
 The balanced random forest classifier and the easy ensemble classifier are the two best models for predicting credit risk for LendingClub customers.
